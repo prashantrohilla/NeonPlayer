@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/orbitronregular"
+        android:padding="2dp"
+        android:text="Now Playing.."
+        android:textAlignment="center"
+        android:textColor="@color/sblue"
+        android:textSize="18sp" />
+
+
+
+    <TextView
+        android:id="@+id/durationPlayed"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/song_artist"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/orbitronregular"
+        android:padding="2dp"
+        android:text="1.00"
+        android:textAlignment="center"
+        android:textColor="@color/sblue"
+        android:textSize="14sp" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_artist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:progressBackgroundTint="@color/sblue"
+        android:progressTint="@color/sblue"
+        android:secondaryProgressTint="@color/sblue"
+        android:thumbTint="@color/swhite" />
+
+
+    <TextView
+        android:id="@+id/durationTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/song_artist"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/seekBar"
+        android:fontFamily="@font/orbitronregular"
+        android:padding="2dp"
+        android:text="11.00"
+        android:textAlignment="center"
+        android:textColor="@color/sblue"
+        android:textSize="14sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/play_pause"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_media_play"
+        android:tint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/sblue" />
+
+    <ImageView
+        android:id="@+id/cover_art"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/settings"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="5dp"
+        android:padding="15dp"
+
+        tools:ignore="UnknownId,UseAppTint" />
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/cover_art"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/orbitronregular"
+        android:padding="5dp"
+        android:text="DJ Snake, J. Balvin, Tyga - Loco Contigo Letra"
+        android:textAlignment="center"
+        android:textColor="@color/sblue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/song_name"
+        android:layout_centerHorizontal="true"
+
+        android:fontFamily="@font/orbitronregular"
+        android:padding="5dp"
+        android:text="DJ Snake"
+        android:textAlignment="center"
+        android:textColor="@color/sblue"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        android:id="@+id/id_next"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/seekBar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@id/play_pause"
+        android:padding="5dp"
+        app:srcCompat="@drawable/next3"
+        />
+
+    <ImageView
+        android:id="@+id/id_prev"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/play_pause"
+        android:padding="5dp"
+        app:srcCompat="@drawable/back2"
+       />
+
+    <ImageView
+        android:id="@+id/id_shuffle"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/seekBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/shuffleoff"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/id_repeat"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/durationTotal"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/repeatoff"
+        />
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/play_pause"
+        android:layout_marginTop="19dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/mic"
+        android:layout_centerHorizontal="true"
+       />
+
+</RelativeLayout>
